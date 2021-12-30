@@ -4,9 +4,7 @@ import './App.css'
 function App() {
   const [nome, setNome]: [string, Function] = useState('')
   const [sobrenome, setSobrenome]: [string, Function]  = useState('')
-  const [idade, setIdade]: [number, Function]  = useState('')
-
-  
+  const [idade, setIdade]: [number, Function]  = useState(0)
 
   return (
     <div className="App">
@@ -17,7 +15,7 @@ function App() {
       </div>
       <hr />
       <div>
-        <section><p>Olá {nome?nome:'---'} {sobrenome}, tudo bem?<br />Você tem {idade?idade:'--'} anos.</p></section>
+        <section><p>Olá {nome?nome:'---'} {sobrenome}, tudo bem?<br />Você tem {idade!==0?idade:'--'} anos.</p></section>
       </div>
     </div>
   )
